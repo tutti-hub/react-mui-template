@@ -6,9 +6,12 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import './main.css';
 import App from './App.jsx';
-
+import store from './state/store.js';
+import { Provider as ReduxProvider } from 'react-redux';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <ReduxProvider store={store}>
+      <App />
+    </ReduxProvider>
   </StrictMode>
 );
