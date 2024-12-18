@@ -8,10 +8,14 @@ import './main.css';
 import App from './App.jsx';
 import store from './state/store.js';
 import { Provider as ReduxProvider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <ReduxProvider store={store}>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </ReduxProvider>
   </StrictMode>
 );
